@@ -1,4 +1,4 @@
-# Airline Passenger Satisfaction Analysis
+# Service Quality Analytics
 
 **Case Study: Customer Experience**
 
