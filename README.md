@@ -1,54 +1,83 @@
-Airline Passenger Satisfaction Analysis
-This repository contains the analysis and Power BI dashboard for a project focused on identifying the key drivers of airline passenger satisfaction.
+# Airline Passenger Satisfaction Analysis
 
-Objective
-The primary goal of this project was to analyze passenger survey data to uncover the top pain points and strengths in the airline's service. The analysis aims to provide actionable recommendations to improve the overall customer experience, reduce dissatisfaction, and identify trends in traveler demographics and preferences.
+**Case Study: Customer Experience**
 
-Dataset
-The analysis was performed on the Airline Passenger Satisfaction dataset, which includes passenger feedback on various aspects of the travel experience, such as in-flight service, booking, and airport convenience.
+> **Executive Summary:**  
+> To mitigate churning among high-value customers, this analysis utilized Power BI to dissect passenger survey data. The findings revealed that while 70% of the passenger volume comes from Business Travelers, this same wide demographic reported "Wi-Fi Reliability" as their primary pain point. By isolating these key dissatisfaction drivers, we developed a roadmap to implement tiered service models and digital onboarding improvements.
 
-Key Variables: Ticket class, customer demographics, travel purpose (business vs. personal), and first-time vs. returning travelers.
+---
 
-Tools & Technologies
-Data Transformation: Power Query
+| **Volume Share**           | **Dissatisfaction**          | **Top Driver**                           | **Pain Point**                 |
+| :------------------------- | :--------------------------- | :--------------------------------------- | :----------------------------- |
+| **70%**<br>Business Travel | **70%**<br>First-Time Flyers | **In-Flight Service**<br>Comfort & Staff | **Wi-Fi**<br>Connectivity Gaps |
 
-Data Visualization & Dashboarding: Power BI
+---
 
-Key DAX Functions: Utilized for creating calculated columns and measures.
+## Interactive Dashboard
 
-Analysis & Key Findings
-Process
-The analysis involved several key techniques:
+[**View the Interactive Dashboard on Power BI**](https://app.powerbi.com/view?r=eyJrIjoiMjQ0YTFjMDQtNjQxOC00YWJiLThlYzMtMTQwMzk1NTZjYjNiIiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9)
 
-Data Transformation: Standardized data formats, pivoted columns for better aggregation, and created new calculated columns in Power Query.
+---
 
-Likert Scale Visualization: Used specialized charts to effectively display satisfaction levels (rated 1-5) across different service categories.
+## The Analytical Process
 
-Comparative Analysis: Examined satisfaction differences between key passenger segments, such as business vs. personal and first-time vs. returning travelers.
+### 1. Power Query Transformation
 
-Key Findings
-Top Drivers of Satisfaction: The analysis identified in-flight service, baggage handling, and seat comfort as the most significant factors contributing to a positive passenger experience.
+**Redesigned raw survey data into a usable star schema.**
 
-Top Passenger Complaints: Conversely, in-flight Wi-Fi service, gate location convenience, and ease of online booking were the most common sources of dissatisfaction.
+- Normalized Likert scale responses (1-5) for consistent aggregation.
+- Handled null values in "Arrival Delay" and "Baggage Handling" columns to ensure statistical integrity.
 
-Demographic Insights:
+### 2. Comparative Segmentation
 
-Business travelers constitute a significant majority, making up 70% of all passengers.
+**Executed a deep dive into traveler demographics.**
 
-A high dissatisfaction rate of 70% among first-time travelers points to a critical need for a smoother and more welcoming initial experience.
+- Isolated **Business Class** vs. **Personal Eco** passengers.
+- Revealed that price sensitivity inversely correlates with service expectations, validating the need for distinct service protocols.
 
-Recommendations
-Based on the findings, the following actionable recommendations were developed:
+### 3. Root Cause Identification
 
-Improve Online Booking Experience: Redesign the booking app and website to be more user-friendly and conduct usability testing to ensure a seamless process.
+**Utilized correlation analysis to pinpoint dissatisfaction drivers.**
 
-Enhance Airport Navigation: Integrate a real-time airport navigation feature into the mobile app to provide step-by-step directions to gates.
+- "Ease of Online Booking" and "In-flight Wi-Fi" were strongly correlated with negative sentiment, even when reported "Seat Comfort" was high.
 
-Upgrade In-Flight Wi-Fi: Partner with leading providers to improve network reliability and introduce tiered pricing models (e.g., free basic messaging, paid streaming).
+---
 
-Address Travel Delays: Conduct an in-depth analysis of historical flight data to identify common causes of delays and improve real-time communication with passengers.
+## Strategic Recommendations
 
-Next Steps
-Conduct A/B testing on the new booking system.
+### Service Strategy
 
-Monitor Wi-Fi performance and gather feedback on the proposed tiered pricing model.
+- **Tiered Wi-Fi Pricing:** Implement premium bandwidth options for business travelers who require connectivity, turning a pain point into a revenue stream.
+- **First-Time Flyer Onboarding:** Launch targeted pre-flight emails to guide new passengers through the check-in process, addressing the 70% dissatisfaction rate in this segment.
+
+### Digital Optimization
+
+- **UX Redesign:** overhaul the online booking flow to reduce friction.
+- **App Integration:** Add real-time airport navigation to the mobile app to improve the ground experience.
+
+---
+
+## Technical Implementation
+
+### Data Structure
+
+The analysis utilizes the Airline Passenger Satisfaction dataset:
+
+- **`airline_passenger_satisfaction.csv`**: Contains 100k+ rows of survey feedback alongside demographic data.
+- **`data_dictionary.csv`**: Definitions for survey columns.
+
+### Setup Instructions
+
+1.  **Prerequisites:** Power BI Desktop.
+2.  **Usage:**
+    - Open Power BI Desktop.
+    - Select **Get Data** -> **Text/CSV**.
+    - Import `airline_passenger_satisfaction.csv`.
+    - Apply the transformation steps (or open logic in Power Query Editor) to handle the null values in the 'Arrival Delay in Minutes' column.
+
+---
+
+## Contact
+
+**Questions on this Analysis?**
+[Email](mailto:mcam215@gmail.com) | [LinkedIn](https://linkedin.com/in/michaelcampbellanalyst) | [GitHub](https://github.com/michaelcampbell215)
